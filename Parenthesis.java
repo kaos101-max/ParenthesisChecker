@@ -11,6 +11,7 @@ import Java.util.Stack;
 public class Correction {
     public static void main(String[] args)
     {
+        System.out.println(isValid("(]")); //false
         System.out.println(isValid("([{({})}])")); //true
         System.out.println(isValid("(([]){})")); //true
         System.out.println(isValid("{}[())()(]")); //false
@@ -21,16 +22,26 @@ public class Correction {
         for(int i = 0; i < space.length(); i++){
             //look at top character if it's an opening character push onto the stack
             if (space.length() == "(" || space.length() == "[" || space.length() == "{")
-                boolean st = true;
+                System.out.println(st);
             //if it's a closing character check the top of the stack and if it contains the corresponding opening character pop.
             if (space.length() == ")" || space.length() == "]" || space.length() == "}")
                 st.parse();
             //if it doesn't return false;
+            if ( != false)
 
             
         }   
         
         //if the stack is empty return true!
         //otherwise false
+        if (st == null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
 }
